@@ -10,3 +10,37 @@
 */
 
 // YOUR CODE HERE
+
+function isPrime(num) {
+    var isPrime = true;
+    for(var i = 2; i < num; i++) {
+        if(num % i === 0) {
+            isPrime= false;
+            break;
+        }
+    }
+    return isPrime;
+}
+
+console.log(isPrime(7));
+
+
+
+function isPrimes(max) {
+  let myArray = [];
+//  debugger
+//go thourgh numbers 2 up to max
+  for (var i = 2; i <= max; i++) {
+    //check each number if prime (isPrime(i))
+      if(isPrime(i)) {
+        //write down if prime and store (push to answer array)
+          myArray.push(i);
+      }
+  }
+  //return array of all prime numbers found
+  return myArray;
+}
+
+console.log(isPrimes(99));
+
+//isPrimes(10);

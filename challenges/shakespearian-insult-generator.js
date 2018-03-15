@@ -17,3 +17,19 @@ var second_word = ["weather-bitten", "unchin-snouted", "toad-spotted", "tickle-b
 var third_word = ["wagtail", "whey-face", "vassal", "varlet", "strumpet", "skainsmate", "scut", "ratsbane", "pumpion", "puttock", "pignut", "pigeon-egg", "nut-hook", "mumble-news", "moldwarp", "miscreant", "minnow", "measle", "mammet", "malt-worm", "maggot-pie", "lout", "lewdster", "joithead", "hugger-mugger", "horn-beast", "hedge-pig", "harpy", "haggard", "gudgeon", "giglet", "fustilarian", "foot-licker", "flirt-gill", "flax-wench", "flap-dragon", "dewberry", "death-token", "codpiece", "coxcomb", "clotpole", "clack-dish", "canker-blossom", "bum-bailey", "bugbear", "boar-pig", "bladder", "barnacle", "baggage", "apple-john"];
 
 // YOUR CODE HERE
+let suppliedInteger = prompt('Enter a number of insults');
+
+function generateInsult(n){
+  // debugger
+  let insultArray = [first_word,second_word,third_word];
+  let insults="";
+  for (var i = 1; i <= n; i++) {
+    let randomIndex = Math.floor(Math.random()*3)
+    let randomArray = insultArray[randomIndex];
+    let insult = randomArray[Math.floor(Math.random()*randomArray.length-1)]
+    insults += insult+", "
+  }
+  console.log(`You, ${insults}you!`)
+}
+
+generateInsult(suppliedInteger);
